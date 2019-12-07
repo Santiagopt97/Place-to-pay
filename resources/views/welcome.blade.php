@@ -49,7 +49,7 @@
             }
 
             .links > a {
-                color: #black;
+                color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -81,10 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Invoice Project
+                    Place To Pay Project
                 </div>
                 <h1>Santiago Pineda</h1>
-                <h1>Place to pay</h1>
             </div>
         </div>
     </body>
