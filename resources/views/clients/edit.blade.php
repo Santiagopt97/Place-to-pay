@@ -3,14 +3,14 @@
 @section('content')
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
-      <form action="{clients.update}" method = "post">
+      <form action="clients/{clients.update}" method = "post">
         @csrf
         <div class="form-group">
-          <label for="firstname">Firstname:</label>
+          <label for="firstname">First name:</label>
           <input type="text" name = "firstname" id = "firstname" class="form-control" required value = "{{$clients->firstname}}">
         </div>
         <div class="form-group">
-          <label for="lastname">Lastname:</label>
+          <label for="lastname">Last name:</label>
           <input type="text" name = "lastname" id = "lastname" class="form-control" required value = "{{$clients->lastname}}">
         </div>
         <div class="form-group">
