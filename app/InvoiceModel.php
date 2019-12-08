@@ -8,5 +8,5 @@ class InvoiceModel extends Model
 {
     public function model(){
 
-    };
+    }
 }
