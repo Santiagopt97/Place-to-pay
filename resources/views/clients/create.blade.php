@@ -7,7 +7,7 @@
   </div>
   <div class="row mt-5">
     <div class="col-sm-8 offset-sm-2">
-      <form action="clients/{clients.store}" method = "post">
+      <form action="clients/{clients.store}" method = "POST">
         @csrf
         <div class="form-group">
           <label for="firstname">Firstname:</label>
