@@ -10,13 +10,14 @@
                     <h3>Welcome</h3>
                 </div>
                 <div class="card-body">
+                    <h5 class="card-title"><strong>Clients</strong></h5>
+                    <p class="card-text">                
+                        <h6><a href="/clients">The clients are here</a></h6>
                     <h5 class="card-title"><strong>Invoices</strong></h5>
                     <p class="card-text">                
                         <h6><a href="/invoice_reports">Click here to see your invoices</a></h6>
                     </p>    
-                    <h5 class="card-title"><strong>Clients</strong></h5>
-                    <p class="card-text">                
-                        <h6><a href="/clients">The clients are here</a></h6>
+
 
                         
                     You are logged in!
