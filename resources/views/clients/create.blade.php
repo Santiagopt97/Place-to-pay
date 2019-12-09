@@ -21,7 +21,7 @@
           <label for="phone">Phone Number:</label>
           <input type="text" name = "phone" id = "phone" class="form-control" required>
         </div>
-        <button type = "submit" class = "btn btn-success">Submit</button>
+        <button type = "submit" class = "btn btn-dark">Submit</button>
       </form>
     </div>
   </div>
