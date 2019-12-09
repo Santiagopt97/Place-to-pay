@@ -25,28 +25,22 @@ class ClientsController extends Controller
      */
     public function create()
     {
-        //Return view to create clients
         return view('clients.create');
     }
     /**
-     * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //Persist the clients in the database
-        //form data is available in the request object
         $clients = new Clients();
-        //input method is used to get the value of input with its
-        //name specified
         $clients->firstname = $request->input('firstname');
         $clients->lastname = $request->input('lastname');
         $clients->department = $request->input('department');
         $clients->phone = $request->input('phone');
         $clients->save(); //persist the data
-        return redirect()->route('clients.index')->with('info','Clients Added Successfully');
+        return view('clients.index')->with('info','Clients Added Successfully');
     }
     /**
      * Show the form for editing the specified resource.

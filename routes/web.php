@@ -18,7 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/invoice', 'InvoiceController@index');
+Route::resource('/invoice_reports', 'InvoiceReportController');
+Route::get('/invoice_reports/{id}/confirmDelete', 'InvoiceReportController@confirmDelete');
+Route::get('/invoice_reports/{invoice_report}/invoice_reports/create', 'InvoiceReportController@create');
+Route::post('/invoice_reports/{invoice_report}/invoices_reports', 'InvoiceReportController@store');
 
 Route::get('/clients', 'ClientsController@index')->name('clients.index');
 Route::get('/clients/{id}/edit','ClientsController@edit')->name('clients.edit');
