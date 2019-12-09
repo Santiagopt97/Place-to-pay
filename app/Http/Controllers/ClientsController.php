@@ -25,7 +25,14 @@ class ClientsController extends Controller
      */
     public function create()
     {
-        return view('clients.create');
+        $clients = new Clients;
+        return response()->view('clients.create', compact('clients'));
+    }
+
+    public function show(Clients $clients)
+    {
+        $clients->load('FisrtName', 'LastName', 'Department', 'PhoneNumber');
+        return response()->view('clients.create', compact('clients'));
     }
     /**
      *
@@ -40,7 +47,7 @@ class ClientsController extends Controller
         $clients->department = $request->input('department');
         $clients->phone = $request->input('phone');
         $clients->save(); //persist the data
-        return view('clients.index')->with('info','Clients Added Successfully');
+        return redirect()->route('clients.index')->withSuccess(__('Clients created successfully!'));
     }
     /**
      * Show the form for editing the specified resource.
