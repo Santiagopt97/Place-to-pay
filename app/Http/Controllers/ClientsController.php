@@ -63,7 +63,6 @@ class ClientsController extends Controller
      */
     public function update(Request $request)
     {
-        //Retrieve the clients and update
         $clients = Clients::find($request->input('id'));
         $clients->firstname = $request->input('firstname');
         $clients->lastname = $request->input('lastname');
